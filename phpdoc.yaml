@@ -1,0 +1,37 @@
+title: geoapi-siradmin - exploitation des administrations de la base SIRENE
+path: /geoapi/siradmin
+doc: |
+  Chargement d'une partie de la base SIRENE dans MongoDB
+  Restriction aux catégories juridiques 7 Personne morale et organisme soumis au droit administratif
+  J'ai besoin de 2 types d'information pour l'urbanisme:
+    1) les EPCI à fiscalité propre et leurs communes car ces EPCI peuvent être autorité en charge d'un DU
+    2) les administrations qui peuvent être gestionnaires de SUP
+  Gestion de l'historique en exploitant les fichiers de mises à jour quotidiennes
+journal: |
+  20/1/2018:
+    refonte du schema MongoDB
+    
+    définition de l'API d'accès
+  17/1/2018:
+    création
+sqlDBs:
+  - name: sirene
+    title: base SIRENE
+    doc: |
+      chargement et restructuration de la base SIRENE
+      http://bdavid.alwaysdata.net/signets/signets.php?rubrique=Sirene
+htmlFiles:
+  - /geoapi/siradmin/apidefinition.yaml
+  - /geoapi/siradmin/schema.yaml
+  - /geoapi/siradmin/categoriesjuridiques.yaml
+  - /geoapi/siradmin/admin.yaml
+phpScripts:
+  - /geoapi/siradmin/load.php
+  - /geoapi/siradmin/api.php
+  - /geoapi/siradmin/unzip.php
+  - /geoapi/siradmin/see.php
+  - /geoapi/siradmin/genqwget.php
+phpIncludes:
+  - /geoapi/siradmin/dessin.inc.php
+  - /geoapi/siradmin/inc.php
+  - /geoapi/siradmin/mongouri.inc.php

@@ -1,0 +1,143 @@
+titre: nomenclature des catégories juridiques limitée aux administrations
+doc: |
+  Correspond à https://www.insee.fr/fr/information/2028129
+nomenclature:
+  '7':
+    libelle: Personne morale et organisme soumis au droit administratif
+    enfants:
+      '71':
+        libelle: Administration de l'état
+        enfants:
+          '7111':
+            libelle: Autorité constitutionnelle
+          '7112':
+            libelle: Autorité administrative ou publique indépendante
+          '7113':
+            libelle: Ministère
+          '7120':
+            libelle: Service central d'un ministère
+          '7150':
+            libelle: Service du ministère de la Défense
+          '7160':
+            libelle: Service déconcentré à compétence nationale d'un ministère (hors Défense)
+          '7171':
+            libelle: Service déconcentré de l'État à compétence (inter) régionale
+          '7172':
+            libelle: Service déconcentré de l'État à compétence (inter) départementale
+          '7179':
+            libelle: (Autre) Service déconcentré de l'État à compétence territoriale
+          '7190':
+            libelle: Ecole nationale non dotée de la personnalité morale
+      '72':
+        libelle: Collectivité territoriale
+        enfants:
+          '7210':
+            libelle: Commune et commune nouvelle
+          '7220':
+            libelle: Département
+          '7225':
+            libelle: Collectivité et territoire d'Outre Mer
+          '7229':
+            libelle: (Autre) Collectivité territoriale
+          '7230':
+            libelle: Région
+      '73':
+        libelle: Etablissement public administratif
+        enfants:
+          '7312':
+            libelle: Commune associée et commune déléguée 
+          '7313':
+            libelle: Section de commune 
+          '7314':
+            libelle: Ensemble urbain 
+          '7321':
+            libelle: Association syndicale autorisée 
+          '7322':
+            libelle: Association foncière urbaine 
+          '7323':
+            libelle: Association foncière de remembrement 
+          '7331':
+            libelle: Établissement public local d'enseignement 
+          '7340':
+            libelle: Pôle métropolitain
+          '7341':
+            libelle: Secteur de commune 
+          '7342':
+            libelle: District urbain 
+          '7343':
+            libelle: Communauté urbaine 
+          '7344':
+            libelle: Métropole
+          '7345':
+            libelle: Syndicat intercommunal à vocation multiple (SIVOM) 
+          '7346':
+            libelle: Communauté de communes 
+          '7347':
+            libelle: Communauté de villes 
+          '7348':
+            libelle: Communauté d'agglomération 
+          '7349':
+            libelle: Autre établissement public local de coopération non spécialisé ou entente 
+          '7351':
+            libelle: Institution interdépartementale ou entente
+          '7352':
+            libelle: Institution interrégionale ou entente 
+          '7353':
+            libelle: Syndicat intercommunal à vocation unique (SIVU) 
+          '7354':
+            libelle: Syndicat mixte fermé 
+          '7355':
+            libelle: Syndicat mixte ouvert
+          '7356':
+            libelle: Commission syndicale pour la gestion des biens indivis des communes 
+          '7357':
+            libelle: Pôle d'équilibre territorial et rural (PETR)
+          '7361':
+            libelle: Centre communal d'action sociale 
+          '7362':
+            libelle: Caisse des écoles 
+          '7363':
+            libelle: Caisse de crédit municipal 
+          '7364':
+            libelle: Établissement d'hospitalisation 
+          '7365':
+            libelle: Syndicat inter hospitalier 
+          '7366':
+            libelle: Établissement public local social et médico-social 
+          '7367':
+            libelle: Centre Intercommunal d'action sociale (CIAS)
+          '7371':
+            libelle: Office public d'habitation à loyer modéré (OPHLM) 
+          '7372':
+            libelle: Service départemental d'incendie et de secours (SDIS)
+          '7373':
+            libelle: Établissement public local culturel 
+          '7378':
+            libelle: Régie d'une collectivité locale à caractère administratif 
+          '7379':
+            libelle: (Autre) Établissement public administratif local 
+          '7381':
+            libelle: Organisme consulaire 
+          '7382':
+            libelle: Établissement public national ayant fonction d'administration centrale 
+          '7383':
+            libelle: Établissement public national à caractère scientifique culturel et professionnel 
+          '7384':
+            libelle: Autre établissement public national d'enseignement 
+          '7385':
+            libelle: Autre établissement public national administratif à compétence territoriale limitée 
+          '7389':
+            libelle: Établissement public national à caractère administratif 
+      '74':
+        libelle: Autre personne morale de droit public administratif
+        enfants:
+          '7410':
+            libelle: Groupement d'intérêt public (GIP) 
+          '7430':
+            libelle: Établissement public des cultes d'Alsace-Lorraine 
+          '7450':
+            libelle: Etablissement public administratif, cercle et foyer dans les armées 
+          '7470':
+            libelle: Groupement de coopération sanitaire à gestion publique 
+          '7490':
+            libelle: Autre personne morale de droit administratif 
