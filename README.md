@@ -10,7 +10,7 @@ définies dans la base SIRENE.
 Ce projet propose une [API REST](http://siradmin.geoapi.fr/)
 de consultation de ces administrations.
 
-Exemples:
+Exemples de requêtes:
 - [Nomenclature des catégories juridiques](http://siradmin.geoapi.fr/categoriesJuridiques)
 - [Services déconcentrés départementaux du département 14](http://siradmin.geoapi.fr/admins?nj=7172&departement=14)
 - [Communauté urbaine (7343), Métropole (7344), Communauté de communes (7346), Communauté de villes (7347) et
