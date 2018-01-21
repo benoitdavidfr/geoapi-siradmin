@@ -17,7 +17,8 @@ Exemples de requêtes:
 Communauté d'agglomération (7348) du département 13](http://siradmin.geoapi.fr/admins?nj=734[34678]&departement=13)
 - [Métropole d'Aix-Marseille-Provence avec la liste des communes correspondantes](http://siradmin.geoapi.fr/admins/200054807)
 
-Ce répertoire contient le code de l'API et des scripts de chargement de la base MongoDB.
+Ce répertoire contient le code de l'API et les scripts de chargement des fichiers SIRENE dans une base MongoDB
+interrogée par l'API.
 
 Documentation complémentaire:
   - [Site SIRENE de l'INSEE](https://www.sirene.fr/)
