@@ -12,11 +12,11 @@ de consultation de ces administrations.
 
 Exemples:
 - [Nomenclature des catégories juridiques](http://siradmin.geoapi.fr/categoriesJuridiques)
-- [Services déconcentrés départementaux du département 14](http://localhost/geoapi/siradmin/restapi.php/admins?nj=7172&departement=14)
-- [Services déconcentrés départementaux du département 14](http://localhost/geoapi/siradmin/restapi.php/admins?nj=7172&departement=14)
+- [Services déconcentrés départementaux du département 14](http://siradmin.geoapi.fr/admins?nj=7172&departement=14)
+- [Services déconcentrés départementaux du département 14](http://siradmin.geoapi.fr/admins?nj=7172&departement=14)
 - [Communauté urbaine (7343), Métropole (7344), Communauté de communes (7346), Communauté de villes (7347) et
-Communauté d'agglomération (7348) du département 13](http://localhost/geoapi/siradmin/restapi.php/admins?nj=734[34678]&departement=13)
-- [Métropole d'Aix-Marseille-Provence avec la liste des communes correspondantes](http://localhost/geoapi/siradmin/restapi.php/admins/200054807)
+Communauté d'agglomération (7348) du département 13](http://siradmin.geoapi.fr/admins?nj=734[34678]&departement=13)
+- [Métropole d'Aix-Marseille-Provence avec la liste des communes correspondantes](http://siradmin.geoapi.fr/admins/200054807)
 
 Ce répertoire contient le code de l'API et des scripts de chargement de la base MongoDB.
 
