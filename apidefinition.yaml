@@ -1,14 +1,14 @@
 swagger: '2.0'
 info:
   description: >-
-    API d'accès aux administrations françaises définies dans la base SIRENE.
-    Les administrations correspondent aux entreprises dont la nature juridique est une sous-catégorie de:
+    Registre des administrations françaises.
+    Les administrations correspondent aux entreprises définies dans la base SIRENE dont la nature juridique appartient à:
       7 Personne morale et organisme soumis au droit administratif
     
     Toutes les données proviennent de [la base SIRENE](https://www.sirene.fr/).
     
   version: 0.1.0
-  title: API d'accès aux administrations françaises
+  title: Registre des administrations françaises
   termsOfService: 'http://siradmin.geoapi.fr/terms/'
   contact:
     email: siradmin@geoapi.fr
@@ -25,11 +25,22 @@ paths:
     get:
       tags:
         - documentation de l'API
-      summary: Retourne la documentation de l'API générée par http://swagger.io/ en HTML ou en JSON
+      summary: Retourne la documentation de l'API générée par http://swagger.io/ en HTML, en JSON ou en Yaml
       operationId: doc
       produces:
         - text/html
+        - text/yaml
         - application/json
+      parameters:
+        - name: f
+          in: query
+          description: format souhaité
+          required: false
+          type: string
+          enum:
+            - html
+            - yaml
+            - json
       responses:
         '200':
           description: opération réussie
@@ -43,36 +54,36 @@ paths:
         - text/html
         - text/yaml
         - application/json
+      parameters:
+        - name: f
+          in: query
+          description: format souhaité
+          required: false
+          type: string
+          enum:
+            - html
+            - yaml
+            - json
       responses:
         '200':
           description: opération réussie
           schema:
-            type: array
-            items:
-              type: object
-              required:
-                - nj
-                - libnj
-              properties:
-                nj:
-                  type: string
-                  description: code définissant la nature juridique
-                  example: '7172'
-                libnj:
-                  type: string
-                  description: libellé de la nature juridique
-                  example: Service déconcentré de l'État à compétence (inter) départementale
-                enfants:
-                  type: array
-                  description: sous-catégories de natures juridiques
-                  items:
-                    type: object
+            type: object
+            properties:
+              titre:
+                type: string
+                description: titre de la nomenclature
+              doc:
+                type: string
+                description: documentation associée à la nomenclature
+              nomenclature:
+                $ref: '#/definitions/Nomenclature'
   /admins:
     get:
       tags:
         - administration
       summary: >-
-        Retourne les administrations avec sélection éventuelle sur nj et/ou departement
+        Retourne les administrations avec sélection obligatoire sur la catégorie juridique et facultative sur le département ou le nom
       operationId: admins
       produces:
         - application/json
@@ -80,11 +91,16 @@ paths:
         - name: nj
           in: query
           description: catégorie juridique des administrations comme regexp, ^ est ajouté devant
-          required: false
+          required: true
           type: string
         - name: departement
           in: query
           description: code du département
+          required: false
+          type: string
+        - name: nom
+          in: query
+          description: regexp sur le nom
           required: false
           type: string
       responses:
@@ -137,6 +153,19 @@ paths:
         '500':
           description: erreur du serveur
 definitions:
+  Nomenclature:
+    type: array
+    items:
+      type: object
+      properties:
+        code:
+          type: string
+          description: code identifiant une entrée de la nomenclature
+        libelle:
+          type: string
+          description: libellé décrivant une entrée de la nomenclature
+        enfants:
+          $ref: '#/definitions/Nomenclature'
   Administration:
     type: object
     required:
@@ -914,3 +943,6 @@ definitions:
       suppression:
         type: string
         description: si l'administration est supprimée date de la suppression
+externalDocs:
+  description: Documentation de l'API
+  url: https://github.com/benoitdavidfr/geoapi-siradmin

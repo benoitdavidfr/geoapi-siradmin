@@ -6,6 +6,7 @@ doc: |
   Voir les usages
   http://files.data.gouv.fr/sirene/sirene_{AAAAMM}_M_M.zip = mise à jour mensuelle fin du mois {AAAAMM}
   sirene_{AAAAMM}_L_M.zip = stock à la fin du mois {AAAAMM}
+  wget http://files.data.gouv.fr/sirene/sirene_201612_L_M.zip
   wget http://files.data.gouv.fr/sirene/sirene_201707_M_M.zip
   wget http://files.data.gouv.fr/sirene/sirene_201706_M_M.zip
   wget http://files.data.gouv.fr/sirene/sirene_201705_M_M.zip

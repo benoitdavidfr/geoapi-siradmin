@@ -198,11 +198,15 @@ elseif (in_array($argv[1], ['majm','majq'])) {
     if (!($dh = opendir($dirpath)))
       die ("erreur dirpath=$dirpath");
     echo "Liste des fichiers:\n";
+    $zippaths = [];
     while (($file = readdir($dh)) !== false) {
       if (preg_match("!sirene_(\d+_$maj)\.zip!", $file, $matches))
-        echo " - $matches[1]\n";
+        $zippaths[] = $matches[1];
     }
     closedir($dh);
+    sort($zippaths);
+    foreach ($zippaths as $zippath)
+      echo " - $zippath\n";
     die();
   }
   
@@ -215,15 +219,18 @@ elseif (in_array($argv[1], ['majm','majq'])) {
     $pattern = $argv[2];
     if (!($dh = opendir($dirpath)))
       die ("erreur dirpath=$dirpath");
+    $zippaths = [];
     while (($file = readdir($dh)) !== false) {
       if (preg_match("!sirene_(\d+_$maj)\.zip!", $file, $matches)) {
         if (preg_match("!$pattern!", $matches[1])) {
-          $zippath = "$dirpath/sirene_$matches[1].zip";
-          integrationMiseAJours($zippath, $basesirene);
+          $zippaths[] = "$dirpath/sirene_$matches[1].zip";
         }
       }
     }
     closedir($dh);
+    sort($zippaths);
+    foreach ($zippaths as $zippath)
+      integrationMiseAJours($zippath, $basesirene);
     die("Fin OK mise à jour à partir des fichiers $dirpath/sirene_$pattern.zip\n");
   }
 }
