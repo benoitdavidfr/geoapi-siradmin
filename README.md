@@ -10,6 +10,9 @@ définies dans la base SIRENE.
 Ce projet propose une [API REST](http://siradmin.geoapi.fr/)
 de consultation de ces administrations.
 
+Exemples:
+- [Nomenclature des catégories juridiques](http://siradmin.geoapi.fr/categoriesJuridiques)
+
 Ce répertoire contient le code de l'API et des scripts de chargement de la base MongoDB.
 
 Documentation complémentaire:
