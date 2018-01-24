@@ -19,7 +19,7 @@ Exemples de requêtes:
 - [Nomenclature des catégories juridiques](http://siradmin.geoapi.fr/categoriesJuridiques)
 - [Liste des services déconcentrés départementaux du département 14](http://siradmin.geoapi.fr/admins?nj=7172&departement=14)
 - [Liste des communautés urbaines (7343), métropoles (7344), communautés de communes (7346), communautés de villes (7347) et
-communautéc d'agglomération (7348) du département 13](http://siradmin.geoapi.fr/admins?nj=734[34678]&departement=13)
+communautés d'agglomération (7348) du département 13](http://siradmin.geoapi.fr/admins?nj=734[34678]&departement=13)
 - [Informations associées à la métropole d'Aix-Marseille-Provence avec la liste des communes correspondantes](http://siradmin.geoapi.fr/admins/200054807)
 
 Ce répertoire contient le code de l'API et les scripts de chargement des fichiers SIRENE dans une base MongoDB
