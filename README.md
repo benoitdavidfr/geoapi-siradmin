@@ -9,9 +9,9 @@ défini dans la base SIRENE.
 
 Ce projet propose une [API REST](http://siradmin.geoapi.fr/)
 de consultation des informations sur ces administrations qui permet principalement:
+- de rechercher des administrations situées dans un département donné et correspondant à certaines catégories juridiques,
 - de consulter la nomenclature juridique utilisée par la base SIRENE,
-- de rechercher des administrations correspondant à certaines catégories juridiques et situées dans un département donné,
-- d'accéder aux informations associées à une administration donnée.
+- d'accéder aux informations associées à une administration définie par son numéro SIREN.
 
 Exemples de requêtes:
 - [Nomenclature des catégories juridiques](http://siradmin.geoapi.fr/categoriesJuridiques)
