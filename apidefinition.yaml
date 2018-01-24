@@ -7,7 +7,7 @@ info:
     
     Toutes les données proviennent de [la base SIRENE](https://www.sirene.fr/).
     
-  version: 0.1.0
+  version: 1.0.0
   title: Registre des administrations françaises
   termsOfService: 'http://siradmin.geoapi.fr/terms/'
   contact:
@@ -944,5 +944,5 @@ definitions:
         type: string
         description: si l'administration est supprimée date de la suppression
 externalDocs:
-  description: Documentation de l'API
+  description: Github de l'API
   url: https://github.com/benoitdavidfr/geoapi-siradmin

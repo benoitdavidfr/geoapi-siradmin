@@ -2,13 +2,18 @@
 
 Registre des administrations françaises fondé sur la base SIRENE.
 
-L'objectif de ce projet est de simplifier l'accès aux définitions des administrations issues de la base SIRENE.
+L'objectif de ce projet est de simplifier l'identification des administrations issue de la base SIRENE.
 En effet les standards de dématérialisation des documents d'urbanisme et des servitudes d'utilité publique
 utilisent largement le numéro SIREN des administrations, notamment des EPCI,
-définies dans la base SIRENE.
+défini dans la base SIRENE.
 
 Ce projet propose une [API REST](http://siradmin.geoapi.fr/)
-de consultation de ces administrations.
+de consultation des informations sur ces administrations.
+
+Cette API permet principalement:
+- de consulter la nomenclature juridique utilisée par la base SIRENE,
+- de rechercher des administrations correspondant à certaines catégories juridiques situées dans un département donné,
+- d'accéder aux informations associées à une administration donnée.
 
 Exemples de requêtes:
 - [Nomenclature des catégories juridiques](http://siradmin.geoapi.fr/categoriesJuridiques)
