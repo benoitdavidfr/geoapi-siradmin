@@ -12,7 +12,7 @@ de consultation des informations sur ces administrations.
 
 Cette API permet principalement:
 - de consulter la nomenclature juridique utilisée par la base SIRENE,
-- de rechercher des administrations correspondant à certaines catégories juridiques situées dans un département donné,
+- de rechercher des administrations correspondant à certaines catégories juridiques et situées dans un département donné,
 - d'accéder aux informations associées à une administration donnée.
 
 Exemples de requêtes:
