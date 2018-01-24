@@ -8,9 +8,7 @@ utilisent largement le numéro SIREN des administrations, notamment des EPCI,
 défini dans la base SIRENE.
 
 Ce projet propose une [API REST](http://siradmin.geoapi.fr/)
-de consultation des informations sur ces administrations.
-
-Cette API permet principalement:
+de consultation des informations sur ces administrations qui permet principalement:
 - de consulter la nomenclature juridique utilisée par la base SIRENE,
 - de rechercher des administrations correspondant à certaines catégories juridiques et situées dans un département donné,
 - d'accéder aux informations associées à une administration donnée.
