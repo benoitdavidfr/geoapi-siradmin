@@ -21,7 +21,7 @@ communautés d'agglomération (7348) du département 13](http://siradmin.geoapi.
 - [Informations associées à la métropole d'Aix-Marseille-Provence avec la liste des communes correspondantes](http://siradmin.geoapi.fr/admins/200054807)
 
 Ce répertoire contient le code de l'API et les scripts de chargement des fichiers SIRENE dans une base MongoDB
-interrogée par l'API.
+utilisée par l'API.
 
 Documentation complémentaire:
   - [Site SIRENE de l'INSEE](https://www.sirene.fr/)
