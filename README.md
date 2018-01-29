@@ -29,6 +29,7 @@ Ce dépôt contient le code de l'API et les scripts de chargement des fichiers S
 utilisée par l'API.
 
 Documentation complémentaire:
+  - [Spécification Swagger de l'API](https://app.swaggerhub.com/apis/benoitdavidfr/siradmin.geoapi.fr/1.0.0)
   - [Site SIRENE de l'INSEE](https://www.sirene.fr/)
   - [Description complète des fichiers stocks et mises à jour mensuelles (dessin L2)](https://www.sirene.fr/static-resources/doc/dessin_L2_description_complete.pdf?version=1.14)
   - [Description complète du dessin des fichiers des mises à jour quotidiennes (dessin XL2)](https://www.sirene.fr/static-resources/doc/dessin_XL2_description_complete.pdf?version=1.14)
