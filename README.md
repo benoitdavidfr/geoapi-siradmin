@@ -13,6 +13,8 @@ de consultation des informations sur ces administrations qui permet principaleme
 - de consulter la nomenclature juridique utilisée par la base SIRENE,
 - d'accéder aux informations associées à une administration définie par son numéro SIREN.
 
+Les administrations concernées sont celles ayant comme catégorie juridique une sous-catégorie de "7 : Personne morale et organisme soumis au droit administratif".
+
 Exemples de requêtes:
 - [Nomenclature des catégories juridiques](http://siradmin.geoapi.fr/categoriesJuridiques)
 - [Liste des services déconcentrés départementaux du département 14](http://siradmin.geoapi.fr/admins?nj=7172&departement=14)
@@ -20,7 +22,10 @@ Exemples de requêtes:
 communautés d'agglomération (7348) du département 13](http://siradmin.geoapi.fr/admins?nj=734[34678]&departement=13)
 - [Informations associées à la métropole d'Aix-Marseille-Provence avec la liste des communes correspondantes](http://siradmin.geoapi.fr/admins/200054807)
 
-Ce répertoire contient le code de l'API et les scripts de chargement des fichiers SIRENE dans une base MongoDB
+La base SIRENE est diffusée sur data.gouv.fr sous la forme de fichiers zip correspondant à un cliché régulier
+et aux mises à jour quotidiennes.
+Ce projet consiste à télécharger ces fichiers et à exposer la base sous la forme d'une API.
+Ce dépôt contient le code de l'API et les scripts de chargement des fichiers SIRENE dans une base MongoDB
 utilisée par l'API.
 
 Documentation complémentaire:

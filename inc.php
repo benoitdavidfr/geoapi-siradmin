@@ -12,14 +12,18 @@ require_once __DIR__.'/mongouri.inc.php';
 require_once __DIR__.'/../../spyc/spyc2.inc.php';
 
 class Siradmin {
-  function doc() {
+  private $mongouri = '';
+  
+  function __construct(string $mongouri) { $this->mongouri = $mongouri; }
+  
+  static function doc() {
     $yaml = spycLoad(__DIR__.'/apidefinition.yaml');
     if (!$yaml)
       throw new Exception("Erreur: fichier apidefinition.yaml non trouvé\n");
     return $yaml;
   }
   
-  function categoriesJuridiques() {
+  static function categoriesJuridiques() {
     $yaml = spycLoad(__DIR__.'/categoriesjuridiques.yaml');
     if (!$yaml)
       throw new Exception("Erreur: fichier naturesjuridiques.yaml non trouvé\n");
@@ -34,7 +38,7 @@ class Siradmin {
       $query['loc.DEPET'] = $params['departement'];
     if (isset($params['nom']))
       $query['idEntreprise.NOMEN_LONG'] = new MongoDB\BSON\Regex($params['nom'], 'i');
-    $mgdbclient = new MongoDB\Client($mongouri);
+    $mgdbclient = new MongoDB\Client($this->mongouri);
     $admins = [];
     foreach ($mgdbclient->sirene->administration->find($query) as $admin) {
       $admin = json_decode(json_encode($admin), true);
@@ -52,7 +56,7 @@ class Siradmin {
   function adminsParSiren(string $siren) {
     if ((strlen($siren)<>9) or !preg_match('!^\d+$!',$siren))
       throw new Exception("Requête incorrecte : le paramètre '$siren' ne correspond pas à un numéro SIREN\n");
-    $mgdbclient = new MongoDB\Client($mongouri);
+    $mgdbclient = new MongoDB\Client($this->mongouri);
     $basesirene = $mgdbclient->sirene;
     $admin = $basesirene->administration->findOne(['_id'=> $siren]);
     if (!$admin)
